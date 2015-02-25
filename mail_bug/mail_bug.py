@@ -4,7 +4,7 @@ import email
 import subprocess
 import keyring
 from email.parser import BytesHeaderParser
-from lib.yaml_config import YamlConfig
+from python_utility.yaml_config import YamlConfig
 
 
 class MailBug:

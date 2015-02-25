@@ -1,4 +1,4 @@
-from lib.yaml_config import YamlConfig
+from mail_bug.yaml_config import YamlConfig
 from os import remove
 from os.path import isfile
 

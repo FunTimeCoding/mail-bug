@@ -6,7 +6,7 @@ except ImportError:
 setup(name='mail-bug',
       version='0.1',
       description='Stub description for mail-bug.',
-      install_requires=['keyring',],
+      install_requires=['keyring'],
       scripts=['bin/mb'],
       packages=[],
       author='Alexander Reitzel',
