@@ -15,7 +15,6 @@ setup(
     url='http://example.org',
     download_url='http://example.org/mail-bug.tar.gz',
     dependency_links=[
-        'git+git://github.com/FunTimeCoding/python-utility.git'
-        '#egg=python-utility-0.1'
+        'git+https://github.com/FunTimeCoding/python-utility.git#egg=python-utility'
     ]
 )
