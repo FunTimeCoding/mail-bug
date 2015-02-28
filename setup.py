@@ -9,7 +9,7 @@ setup(
     description='Stub description for mail-bug.',
     install_requires=['keyring', 'python-utility==0.1'],
     scripts=['bin/mb'],
-    packages=[],
+    packages=['mail_bug'],
     author='Alexander Reitzel',
     author_email='funtimecoding@gmail.com',
     url='http://example.org',
