@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+import sys
 from mail_bug.mail_bug import MailBug
 
 
 def main():
-    mb = MailBug()
-    return mb.run()
+    bug = MailBug(sys.argv[1:])
+    return bug.run()
+
 
 if __name__ == '__main__':
     main()
