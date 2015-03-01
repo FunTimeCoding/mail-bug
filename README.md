@@ -12,7 +12,7 @@ pip3 install -e ../mail-bug
 Install the project from GitHub.
 
 ```sh
-pip3 install git+git://github.com/FunTimeCoding/mail-bug.git
+pip3 install git+https://github.com/FunTimeCoding/mail-bug.git --process-dependency-links --trusted-host github.com
 ```
 
 Uninstall the project.
