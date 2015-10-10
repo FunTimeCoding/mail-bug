@@ -6,13 +6,13 @@
 Install the project from a local clone.
 
 ```sh
-pip3 install -e ../mail-bug
+pip3 install --user --editable .
 ```
 
 Install the project from GitHub.
 
 ```sh
-pip3 install git+https://github.com/FunTimeCoding/mail-bug.git --process-dependency-links --trusted-host github.com
+pip3 install git+git://github.com/FunTimeCoding/mail-bug.git
 ```
 
 Uninstall the project.
@@ -30,27 +30,41 @@ Run the main script without having to install the project.
 PYTHONPATH=. bin/mb
 ```
 
-Install development tools.
+Install tools on OS X.
 
 ```sh
-pip3 install -U pytest pytest-cov pylint pep8
+brew install shellcheck python3
 ```
 
-Run code style check, lint check and tests.
+Install tools on Debian Jessie.
 
 ```sh
-./run-code-style-check.sh
-./run-lint-check.sh
+apt-get install shellcheck python3-dev python3-pip python3-venv
+```
+
+Install pip requirements.
+
+```sh
+pip3 install --upgrade --user --requirement requirements.txt
+```
+
+Run code style check, metrics and tests.
+
+```sh
+./run-style-check.sh
+./run-metrics.sh
 ./run-tests.sh
 ```
 
-Run `ant` like Jenkins. Requires `ant` to be installed. This generates reports in the `build` directory.
+Build project like Jenkins.
 
 ```sh
-ant
+./build.sh
 ```
 
 
 ## Skeleton details
 
 * The reason why the `tests` directory is not called `test` is because a package named `test` exists.
+* The main source code directory is the same name as the package in python packages.
+* Dashes in project names become underscores in python code. They are still legit.
