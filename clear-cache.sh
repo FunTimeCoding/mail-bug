@@ -1,7 +1,15 @@
 #!/bin/sh -e
-echo "Deleting python cache files and directories and the .egg-info directory."
-find . -name "__pycache__" | xargs -I {} rm -rfv "{}"
-find . -name "*.egg-info" | xargs -I {} rm -rfv "{}"
-find . -name "*.pyc" | xargs -I {} rm -v "{}"
-rm -rfv build
-rm -f .coverage
+
+echo "Deleting cached and generated files."
+DIR=$(dirname "${0}")
+SCRIPT_DIR=$(cd "${DIR}"; pwd)
+FILES="build .pyvenv .coverage .cache"
+
+for FILE in ${FILES}; do
+    if [ -e "${FILE}" ]; then
+        echo "rm -rf ${FILE}"
+        rm -rf "${SCRIPT_DIR:?}/${FILE}"
+    fi
+done
+
+find "${SCRIPT_DIR}" \( -name '__pycache__' -o -name '*.pyc' -o -name '*.egg-info' \) -delete
