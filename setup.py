@@ -7,14 +7,11 @@ setup(
     name='mail-bug',
     version='0.1',
     description='Stub description for mail-bug.',
-    install_requires=['keyring', 'python-utility==0.1'],
+    install_requires=['keyring', 'python-utility'],
     scripts=['bin/mb'],
     packages=['mail_bug'],
     author='Alexander Reitzel',
     author_email='funtimecoding@gmail.com',
     url='http://example.org',
-    download_url='http://example.org/mail-bug.tar.gz',
-    dependency_links=[
-        'git+https://github.com/FunTimeCoding/python-utility.git@master#egg=python-utility-0.1'
-    ]
+    download_url='http://example.org/mail-bug.tar.gz'
 )

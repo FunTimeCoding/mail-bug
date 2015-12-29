@@ -1,6 +1,5 @@
 # MailBug
 
-
 ## Setup
 
 Install the project from a local clone.
