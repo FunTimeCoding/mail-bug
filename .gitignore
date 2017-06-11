@@ -1,7 +1,9 @@
-*.pyc
-*.egg-info
-.coverage
-.pyvenv
-.cache
-.tox
 build
+.venv
+.tox
+mail_bug.egg-info
+*.pyc
+
+# pytest
+.coverage
+.cache

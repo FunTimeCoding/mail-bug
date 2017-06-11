@@ -7,10 +7,10 @@ Notable changes to this project are documented here.
 
 ### Added
 
-- Thing that isn't released yet.
+- Thing that is not released yet.
 
 
-## [0.0.2] - 2015-11-07
+## [0.0.2] - 2015-12-14
 
 ### Added
 
@@ -29,7 +29,7 @@ Notable changes to this project are documented here.
 - Thing that was fixed.
 
 
-## 0.0.1 - 2015-11-07
+## 0.0.1 - 2015-12-14
 
 ### Added
 

@@ -2,16 +2,12 @@
 
 ## Setup
 
-Install the project from a local clone.
+This section explains how to install and uninstall this project.
+
+Install the project.
 
 ```sh
-pip3 install --user --editable .
-```
-
-Install the project from GitHub.
-
-```sh
-pip3 install git+git://github.com/FunTimeCoding/mail-bug.git
+pip3 install git+https://git@github.com/FunTimeCoding/mail-bug.git#egg=mail-bug
 ```
 
 Uninstall the project.
@@ -21,49 +17,37 @@ pip3 uninstall mail-bug
 ```
 
 
+## Usage
+
+This section explains how to use this project.
+
+Run the main program.
+
+```sh
+bin/mb
+```
+
+
 ## Development
 
-Run the main script without having to install the project.
+This section explains commands to help the development of this project.
+
+Install the project from a clone.
 
 ```sh
-PYTHONPATH=. bin/mb
+./setup.sh
 ```
 
-Install tools on OS X.
+Run tests, style check and metrics.
 
 ```sh
-brew install shellcheck python3
-```
-
-Install tools on Debian Jessie.
-
-```sh
-apt-get install shellcheck python3-dev python3-pip python3-venv
-```
-
-Install pip requirements.
-
-```sh
-pip3 install --upgrade --user --requirement requirements.txt
-```
-
-Run code style check, metrics and tests.
-
-```sh
+./run-tests.sh
 ./run-style-check.sh
 ./run-metrics.sh
-./run-tests.sh
 ```
 
-Build project like Jenkins.
+Build the project.
 
 ```sh
 ./build.sh
 ```
-
-
-## Skeleton details
-
-* The reason why the `tests` directory is not called `test` is because a package named `test` exists.
-* The main source code directory is the same name as the package in python packages.
-* Dashes in project names become underscores in python code. They are still legit.
