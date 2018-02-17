@@ -5,7 +5,7 @@ import email
 import subprocess
 import keyring
 from email.parser import BytesHeaderParser
-from python_utility.yaml_config import YamlConfig
+from mail_bug.yaml_config import YamlConfig
 from sys import argv as argument_vector, exit as system_exit
 
 
