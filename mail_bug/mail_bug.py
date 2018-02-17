@@ -6,6 +6,7 @@ import subprocess
 import keyring
 from email.parser import BytesHeaderParser
 from python_utility.yaml_config import YamlConfig
+from sys import argv as argument_vector, exit as system_exit
 
 
 class MailBug:
@@ -14,6 +15,10 @@ class MailBug:
         self.verbose = args.verbose
         self.command = args.command
         self.config = YamlConfig(args.config_file)
+
+    @staticmethod
+    def main():
+        system_exit(MailBug(argument_vector[1:]).run())
 
     @staticmethod
     def parse_args(arguments: list=None):
