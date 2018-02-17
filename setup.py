@@ -25,7 +25,7 @@ setup(
     ],
     keywords='development project skeleton',
     packages=['mail_bug'],
-    install_requires=[],
+    install_requires=['keyring'],
     python_requires='>=3.2',
     entry_points={
         'console_scripts': [
