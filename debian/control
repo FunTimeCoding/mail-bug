@@ -1,0 +1,16 @@
+Source: mail-bug
+Priority: optional
+Maintainer: Alexander Reitzel <funtimecoding@gmail.com>
+Build-Depends: debhelper (>= 9), dh-python, python3-all, python3-setuptools, python3-mccabe
+Standards-Version: 3.9.8
+Homepage: https://github.com/FunTimeCoding/mail-bug
+X-Python3-Version: >= 3.2
+Vcs-Browser: https://github.com/FunTimeCoding/mail-bug
+Vcs-Git: https://github.com/FunTimeCoding/mail-bug.git
+
+Package: python3-mail-bug
+Section: python
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: stub short description
+ Stub long description.

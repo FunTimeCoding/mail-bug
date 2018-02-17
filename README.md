@@ -2,15 +2,21 @@
 
 ## Setup
 
-This section explains how to install and uninstall this project.
+This section explains how to install and uninstall the project.
 
-Install the project.
+Install pip package from GitHub.
 
 ```sh
 pip3 install git+https://git@github.com/FunTimeCoding/mail-bug.git#egg=mail-bug
 ```
 
-Uninstall the project.
+Install pip package from DevPi.
+
+```sh
+pip3 install -i https://testpypi.python.org/pypi mail-bug
+```
+
+Uninstall package.
 
 ```sh
 pip3 uninstall mail-bug
@@ -19,35 +25,53 @@ pip3 uninstall mail-bug
 
 ## Usage
 
-This section explains how to use this project.
+This section explains how to use the project.
 
-Run the main program.
+Run program.
 
 ```sh
-bin/mb
+mb
 ```
 
 
 ## Development
 
-This section explains commands to help the development of this project.
+This section explains how to improve the project.
 
-Install the project from a clone.
+Configure Git on Windows before cloning. This avoids problems with Vagrant and VirtualBox.
 
 ```sh
-./setup.sh
+git config --global core.autocrlf input
 ```
 
-Run tests, style check and metrics.
+Build project. This installs dependencies.
 
 ```sh
-./run-tests.sh
-./run-style-check.sh
-./run-metrics.sh
+script/build.sh
 ```
 
-Build the project.
+Run tests, check style and measure metrics.
 
 ```sh
-./build.sh
+script/test.sh
+script/check.sh
+script/measure.sh
+```
+
+Build package.
+
+```sh
+script/package.sh
+```
+
+Install Debian package.
+
+```sh
+sudo dpkg --install build/python3-mail-bug_0.1.0-1_all.deb
+```
+
+Show files the package installed.
+
+```sh
+dpkg-query --listfiles python3-mail-bug
 ```

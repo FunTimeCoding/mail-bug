@@ -1,10 +1,11 @@
-pep8 # style check
+pycodestyle # style check
 pylint # style check
 flake8 # style check
 pyenchant # pylint spell check plugin
 pytest # test framework
 pytest-cov # pytest coverage plugin
-keyring
+mccabe # static analysis
+keyring # password library
 
 # helper classes
 git+https://git@github.com/FunTimeCoding/python-utility.git#egg=python-utility
